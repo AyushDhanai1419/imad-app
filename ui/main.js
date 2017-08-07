@@ -1,5 +1,5 @@
 console.log('Loaded!');
-
+/*
 var button = document.getElementById('counter');
 var counter = 0;
 button.onclick = function()
@@ -30,7 +30,7 @@ button.onclick = function()
   
   request.open('GET','http://ayushdhanai1419.imad.hasura-app.io/counter',true);
   request.sent(null);
-  
+  */
   
   
  
