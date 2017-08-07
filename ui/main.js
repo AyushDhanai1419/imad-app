@@ -17,7 +17,7 @@ function moveRight(){
     
     if(marginLeft > 500 && c===1)
     {
-         marginLeft = marginLeft - 5;
+         marginLeft = marginLeft - 45;
          if(marginLeft ===-500)
          {
              c=0;
@@ -25,7 +25,7 @@ function moveRight(){
     }
     else if(marginLeft <= 500 && c===0)
     {
-         marginLeft = marginLeft + 5;
+         marginLeft = marginLeft + 45;
          if(marginLeft===500)
          {
              c=1;
