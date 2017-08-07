@@ -52,7 +52,7 @@ var htmlTemplate=`
     <body>
         <div class="container">
         <div><a href="/">HOME</a>
-        </div>
+        </div> 
         <div class="center">
             <h1><u>${heading}</u></h1>
         </div>
