@@ -10,18 +10,26 @@ element.innerHTML = "New Value";
 //move the image on click
 
 var img = document.getElementById('madi');
-var marginLeft = 0;
+var marginLeft = 0,c=0;
 function moveRight(){
    
     
     
-    if(marginLeft > 500)
+    if(marginLeft > 500 && c===1)
     {
          marginLeft = marginLeft - 5;
+         if(marginLeft ===-500)
+         {
+             c=0;
+         }
     }
-    else if(marginLeft < 500)
+    else if(marginLeft <= 500 && c===0)
     {
          marginLeft = marginLeft + 5;
+         if(marginLeft===500)
+         {
+             c=1;
+         }
     }
     img.style.marginLeft = marginLeft + "px";
 }
