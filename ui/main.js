@@ -15,13 +15,13 @@ function moveRight(){
    
     
     
-    if(marginLeft <500)
+    if(marginLeft > 500)
     {
-         marginLeft = marginLeft + 1;
+         marginLeft = marginLeft - 5;
     }
-    else if(marginLeft >500)
+    else if(marginLeft < 500)
     {
-         marginLeft = marginLeft - 1;
+         marginLeft = marginLeft + 5;
     }
     img.style.marginLeft = marginLeft + "px";
 }
