@@ -29,7 +29,7 @@ var articles ={
             title: 'Article Three | Ayush Dhanai',
     heading: 'Article Three',
     date: '20 Sep',
-    content: ` <p>This is the content if Article Three.</p>
+    content: ` <p>This is the content of Article Three.</p>
         `
         }
 };
