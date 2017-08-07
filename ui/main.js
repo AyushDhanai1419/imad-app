@@ -9,7 +9,7 @@ element.innerHTML = "New Value";
 
 //move the image on click
 
-var img = document.getElementById('madi');
+var img = document.getElementById('ayush');
 var marginLeft = 0;
 function moveRight(){
    
