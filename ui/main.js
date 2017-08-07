@@ -13,31 +13,28 @@ var img = document.getElementById('madi');
 var marginLeft = 0,c=0;
 function moveRight(){
    
-    
-    
-    if(marginLeft > 500 && c===1)
-    {
-         marginLeft = marginLeft - 5;
-         if(marginLeft ===-500)
-         {
-             c=0;
-         }
-    }
-    else if(marginLeft <= 500 && c===0)
-    {
-         marginLeft = marginLeft + 5;
-         if(marginLeft===500)
-         {
-             c=1;
-         }
-    }
+    marginLeft = marginLeft + 5;
     img.style.marginLeft = marginLeft + "px";
+    if(marginLeft >= 500)
+    {
+        c=1;
+    }
+}
+
+function moveLeft(){
+   
+    marginLeft = marginLeft - 5;
+    img.style.marginLeft = marginLeft + "px";
+    if(marginLeft ===0)
+    {
+        c=0;
+    }
 }
 
 img.onclick = function(){
-    /*if(marginLeft <=500)
+    if(marginLeft <=500 && c===0)
     var Rinterval = setInterval(moveRight,50);
-    else*/
+    else
     var Linterval = setInterval(moveLeft,50);
 
     
