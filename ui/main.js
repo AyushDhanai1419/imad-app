@@ -17,7 +17,7 @@ function moveRight(){
     
     if(marginLeft > 500 && c===1)
     {
-         marginLeft = marginLeft - 45;
+         marginLeft = marginLeft - 5;
          if(marginLeft ===-500)
          {
              c=0;
@@ -25,7 +25,7 @@ function moveRight(){
     }
     else if(marginLeft <= 500 && c===0)
     {
-         marginLeft = marginLeft + 45;
+         marginLeft = marginLeft + 5;
          if(marginLeft===500)
          {
              c=1;
@@ -35,5 +35,10 @@ function moveRight(){
 }
 
 img.onclick = function(){
-    var interval = setInterval(moveRight,50);
+    if(marginLeft <=500)
+    var Rinterval = setInterval(moveRight,50);
+    else
+    var Linterval = setInterval(moveLeft,50);
+
+    
 };
