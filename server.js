@@ -17,7 +17,7 @@ var articles ={
         <p>This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.This is the content if Article one.</p>
         `
         },
-        'article-two' : {
+'article-two' : {
             title: 'Article Two | Ayush Dhanai',
     heading: 'Article Two',
     date: '10 Sep',
@@ -25,7 +25,7 @@ var articles ={
         `
         },
         
-        'article-three' : {
+'article-three' : {
             title: 'Article Three | Ayush Dhanai',
     heading: 'Article Three',
     date: '20 Sep',
@@ -79,7 +79,7 @@ app.get('/ui/style.css', function (req, res) {
 
 app.get('/:articleName',function (req, res){
     var articleName = rec.params.articleName;
-  res.sendFile(createTemplate(articles[articleName]));
+  res.send(createTemplate(articles[articleName]));
 });
 
 
