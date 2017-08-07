@@ -1,12 +1,6 @@
 console.log('Loaded!');
 
 
-//change text of the main-text div
-
-var element = document.getElementById('main-text');
-
-element.innerHTML = "New Value";
-
 //move the image on click
 
 var img = document.getElementById('ayush');
@@ -23,7 +17,4 @@ function moveRight(){
 img.onclick = function(){
     
     var interval = setInterval(moveRight,50);
-    
-
-    
 };
