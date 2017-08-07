@@ -28,8 +28,8 @@ button.onclick = function()
   
   //Make a request
   
-  request.open('GET',)
-  
+  request.open('GET','http://ayushdhanai1419.imad.hasura-app.io/counter',true);
+  request.sent(null);
   
   
   
