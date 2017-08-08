@@ -40,8 +40,21 @@ var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function()
 {
-    
-    var names = ['name1','name2','name3','name4'];
+      
+  //create a request to counter end point.
+  var request = new XMLHttpRequest();
+  
+  //Capture the response and store it in a variable.
+  
+  request.onreadystatechange = function()
+  {
+      if(request.readyState === XMLHttpRequest.DONE)
+      {
+          //take some action
+          if(request.status === 200)
+          {
+             var names = request.responseText;
+             names = JSON.parse(name);
     var list = '';
     for(var i = 0; i<names.length; i++)
     {
@@ -50,5 +63,14 @@ submit.onclick = function()
     var ul = document.getElementById('namelist');
     ul.innerHTML = list;
     
+     
+          }
+      }
+      
+      
+    //Make a request
+  
+  request.open('GET','http://ayushdhanai1419.imad.hasura-app.io/submit-name?name='+name,true);
+  request.send(null);
     
 };
