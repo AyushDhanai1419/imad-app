@@ -86,7 +86,12 @@ return htmlTemplate;
           res.send(createTemplate(articles[articleName]));
         });
         
-        
+        var names = [];
+        app.get('/submit-name/:name',function (req, res){
+            var name = req.param.name;
+            names.push(name);
+            res.send(JSON.stringify(names));
+        });
         
         var counter = 0;
         app.get('/ui/counter',function (req, res) {
