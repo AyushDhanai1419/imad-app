@@ -1,4 +1,4 @@
-
+console.log('Loaded!');
 
 var button = document.getElementById('counter');
 
@@ -18,7 +18,7 @@ button.onclick = function()
           //take some action
           if(request.status === 200)
           {
-              varcounter = request.responseText;
+              var counter = request.responseText;
               
               //render the variable in the correct span.
               var span = document.getElementById('count');
