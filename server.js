@@ -89,7 +89,7 @@ return htmlTemplate;
         
         
         var counter = 0;
-        app.get('/counter',function (req, res) {
+        app.get('/ui/counter.html',function (req, res) {
             counter = counter + 1;
             res.send(counter.toString());
         });
