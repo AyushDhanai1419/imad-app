@@ -91,7 +91,7 @@ return htmlTemplate;
         var counter = 0;
         app.get('/counter',function (req, res) {
             counter = counter + 1;
-            res.sendFile(counter.toString());
+            res.send(counter.toString());
         });
         
         // Do not change port, otherwise your app won't run on IMAD servers
