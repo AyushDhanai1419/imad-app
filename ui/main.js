@@ -2,15 +2,10 @@ console.log('Loaded!');
 
 var button = document.getElementById('counter');
 
-var counter =0;
+
 button.onclick = function()
 {
-    counter = counter + 1;
-     var span = document.getElementById('count');
-              span.innerHTML = counter.toString();
-         
     
-    /*
   //create a request to counter end point.
   var request = new XMLHttpRequest();
   
@@ -35,6 +30,6 @@ button.onclick = function()
   //Make a request
   
   request.open('GET','http://ayushdhanai1419.imad.hasura-app.io/ui/counter',true);
-  request.sent(null);*/
+  request.sent(null);
   
 };
