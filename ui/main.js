@@ -31,8 +31,4 @@ button.onclick = function()
   request.open('GET','http://ayushdhanai1419.imad.hasura-app.io/ui/counter',true);
   request.sent(null);
   
-  
-  
- 
-  
 };
