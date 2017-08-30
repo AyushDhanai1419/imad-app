@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
+var pool =new Pool(config);
 var config = {
     user:'ayushdhanai1419',
     database:'ayushdhanai1419',
@@ -10,7 +11,7 @@ var config = {
     port:'5432',
     password: process.env.DB_PASSWORD
 };
-var pool =new Pool(config);
+
 
 
 var app = express();
