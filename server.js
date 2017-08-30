@@ -13,22 +13,7 @@ var config = {
 };
 
 
- var pool =new Pool(config);
-        app.get('/test-db',function(req,res){
-        
-        pool.query('Select* FROM test', function(err,result)
-        {
-            if(err)
-            {
-                res.status(500).send(err.toString());
-            }
-            else
-            {
-                res.send(JSON.stringify(result));
-            }
-        });
-        
-});
+
 var app = express();
 app.use(morgan('combined'));
 
@@ -108,7 +93,22 @@ return htmlTemplate;
           res.sendFile(path.join(__dirname, 'ui', 'main.js'));
         });
          
-       
+        var pool =new Pool(config);
+        app.get('/test-db',function(req,res){
+        
+        pool.query('Select* FROM test', function(err,result)
+        {
+            if(err)
+            {
+                res.status(500).send(err.toString());
+            }
+            else
+            {
+                res.send(JSON.stringify(result));
+            }
+        });
+        
+});
         var names = [];
         app.get('/submit-name',function (req, res){
             var name = req.query.name;
